@@ -1,39 +1,14 @@
 # MyWebApp
-CI/CD Deployment for Springboot Application.
 
-Course-end Project 1
-Description
+User Data for Dependencies installations for AMAZON Linux 2:-
 
-Project Objective: 
-
-As a Full Stack Developer, you have to build a CI/CD pipeline to demonstrate continuous deployment and host the application on AWS EC2 instance.
-
- 
-
-Background of the problem statement: 
-
-As the project is in the final stage, management has asked you to automate the integration and deployment of the web application. You are required to set up an environment where the application will be hosted and accessed by users. The source code is supposed to be fetched from a GitHub repository.
-
- 
-
-You must use the following: 
-
-Eclipse
-
-GitHub
-
-Jenkins
-
-AWS EC2/ Virtual machine
-
- 
-
-Following requirements should be met: 
-
-A part of the source code should be tracked on the GitHub repository. You need to document the tracked files that are ignored during the final push to the GitHub repository.
-
-The submission of your GitHub repository link is mandatory. In order to track your task, you need to share the link of the repository in the document.
-
-The step-by-step process involved in completing this task should be documented.
-
- 
+#!/bin/bash
+sudo yum -y update
+sudo yum -y install ruby
+sudo yum -y install wget
+cd /home/ec2-user
+wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+sudo chmod +x ./install
+sudo ./install auto
+sudo yum install -y python-pip
+sudo pip install awscli
